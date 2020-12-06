@@ -1,0 +1,30 @@
+
+CameraModels
+CameraModels/KannalaBrandt8.cpp
+CameraModels/Pinhole.cpp
+
+Atlas.cc
+Converter.cc   ---- dongxiao
+Frame.cc
+FrameDrawer.cc
+G2oTypes.cc
+ImuTypes.cc
+Initializer.cc ----dongxiao
+KeyFrame.cc
+KeyFrameDatabase.cc
+LocalMapping.cc ----gaoran
+LoopClosing.cc
+Map.cc
+MapDrawer.cc
+MapPoint.cc
+MLPnPsolver.cpp
+OptimizableTypes.cpp
+Optimizer.cc    ---- gaoran
+ORBextractor.cc
+ORBmatcher.cc
+PnPsolver.cc
+Sim3Solver.cc
+System.cc
+Tracking.cc  ---- dongxiao
+TwoViewReconstruction.cc ---- dongxiao
+Viewer.cc
