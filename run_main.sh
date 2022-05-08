@@ -1,10 +1,13 @@
 #!/bin/bash
-pathDatasetEuroc='/home/yongqi/workspace/58_Dataset_for_ORB_SLAM3/EuRoc_Dataset' #Example, it is necesary to change it by the dataset path
 
-#------------------------------------
-# Monocular Examples
-echo "Launching MH01 with Monocular sensor"
+#euroc_data download for test: 
 
-./Examples/Monocular/mono_euroc ./Vocabulary/ORBvoc.txt ./Examples/Monocular/EuRoC.yaml "$pathDatasetEuroc"/MH01 ./Examples/Monocular/EuRoC_TimeStamps/MH01.txt dataset-MH01_mono
+#链接: https://pan.baidu.com/s/1YEt1WNl1cHdgHWdbtWQDOQ?pwd=45uk 提取码: 45uk 
+
+pathDatasetEuroc='YOUR_PATH/EuRoc_data' #Example, it is necesary to change it by the dataset path
+
+# Monocular-Inertial Examples
+echo "Launching MH01 with Monocular-Inertial sensor"
+./Examples/Monocular-Inertial/mono_inertial_euroc ./Vocabulary/ORBvoc.bin ./Examples/Monocular-Inertial/EuRoC.yaml "$pathDatasetEuroc"/MH01 ./Examples/Monocular-Inertial/EuRoC_TimeStamps/MH01.txt dataset-MH01_monoi
 
 

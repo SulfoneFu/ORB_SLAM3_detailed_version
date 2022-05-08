@@ -4,7 +4,33 @@
 
 ### 主要参与的工作人员
 
-本工程主要由公众号「3D视觉工坊」的嘉宾及博主一起协同完成，仍在持续完善中。
+本工程主要由公众号「3D视觉工坊」的嘉宾宏宇博士完成。
+
+作者介绍：
+
+魏宏宇博士，东南大学博三在读，在IEEE Sensors Journal等期刊发表论文2篇，精通视觉惯性SLAM。「3D视觉从入门到精通」知识星球特邀嘉宾。主讲课程如下：
+
+orb-slam3系列视频课程，学习地址->[前往](https://www.3dcver.com/detail/p_625d6caae4b09dda125cab85/6)
+
+1、[ORB-SLAM3源码与原理彻底解析-第一讲-绪论](https://www.3dcver.com/detail/v_6241bfd9e4b0f7cb7c77e870/3)                
+
+1、[ORB-SLAM3系列之匹配算法（一）](https://www.3dcver.com/detail/l_62503788e4b04e8d902d54b2/4)
+
+2、....持续更新中...
+
+
+
+### 说明
+
+Two ROS interfaces Mono_inertial and Stereo_inertial were added to the ORB-SLAM3. Modified the loading vocabulary in a faster binary way.
+
+增加了两个ROS接口，单目IMU和双目IMU，替换了词典为二进制格式，加载速度更快。
+
+Command
+
+Mono_inertial: rosrun ORB_SLAM3 Mono_inertial /YOUR_PATH/ORBvoc.bin /YOUR_PATH/EuRoC.yaml
+
+Stereo_inertial: rosrun ORB_SLAM3 Stereo_inertial /YOUR_PATH/ORBvoc.bin /YOUR_PATH/EuRoC.yaml
 
 
 
