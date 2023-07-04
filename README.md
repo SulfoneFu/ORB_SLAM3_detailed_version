@@ -1,24 +1,19 @@
 # ORB_SLAM3_vision3d
 
-本仓库主要folked from  [ORB-SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)，主要对其进行代码注释，与bug修复。
+本仓库主要 folked from  [ORB_SLAM3_detailed_version](https://github.com/ORBSLAM3/ORB_SLAM3_detailed_version)，主要对其进行代码注释，与bug修复。
 
-### 主要参与的工作人员
+# 配置环境
 
-本工程主要由公众号「3D视觉工坊」的嘉宾宏宇博士完成。
+> 参考 https://blog.csdn.net/kuvinxu/article/details/125992909
 
-作者介绍：
-
-魏宏宇博士，东南大学博三在读，在IEEE Sensors Journal等期刊发表论文2篇，精通视觉惯性SLAM。「3D视觉从入门到精通」知识星球特邀嘉宾。主讲课程如下：
-
-orb-slam3系列视频课程，学习地址->[前往](https://www.3dcver.com/detail/p_625d6caae4b09dda125cab85/6)
-
-1、[ORB-SLAM3源码与原理彻底解析-第一讲-绪论](https://www.3dcver.com/detail/v_6241bfd9e4b0f7cb7c77e870/3)                
-
-1、[ORB-SLAM3系列之匹配算法（一）](https://www.3dcver.com/detail/l_62503788e4b04e8d902d54b2/4)
-
-2、....持续更新中...
-
-
+- 至少12G内存
+- ubuntu: 20.04
+- gcc: 9.4.0
+- cmake:3.23.2
+- opencv: 4.5.5
+- eigen3: 3.3.7
+- Pangolin: v0.6 (注意：高版本的库不能工作)
+- boost: 1.79.0
 
 ### 说明
 

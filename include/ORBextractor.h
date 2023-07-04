@@ -21,7 +21,9 @@
 
 #include <vector>
 #include <list>
-#include <opencv/cv.h>
+// 在opencv4中opencv2的cv.h融合进了imgproc.hpp里
+// #include <opencv/cv.h>
+#include <opencv2/imgproc.hpp>
 
 
 namespace ORB_SLAM3

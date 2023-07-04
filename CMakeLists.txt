@@ -33,11 +33,14 @@ endif()
 
 LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake_modules)
 
-find_package(OpenCV 3)
+find_package(OpenCV 3 QUIET)
 if(NOT OpenCV_FOUND)
-   find_package(OpenCV 2.4.3 QUIET)
+   find_package(OpenCV 4 QUIET)
    if(NOT OpenCV_FOUND)
-      message(FATAL_ERROR "OpenCV > 2.4.3 not found.")
+      find_package(OpenCV 2.4.3 QUIET)
+      if(NOT OpenCV_FOUND)
+         message(FATAL_ERROR "OpenCV > 2.4.3 not found.")
+      endif()
    endif()
 endif()
 
@@ -133,9 +136,13 @@ add_executable(mono_tum
 Examples/Monocular/mono_tum.cc)
 target_link_libraries(mono_tum ${PROJECT_NAME})
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular-Inertial)
+# add_executable(mono_euroc
+#         Examples/Monocular/mono_euroc.cc)
+# target_link_libraries(mono_euroc ${PROJECT_NAME})
 
-add_executable(mono_inertial_euroc
-Examples/Monocular-Inertial/mono_inertial_euroc.cc)
-target_link_libraries(mono_inertial_euroc ${PROJECT_NAME})
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular-Inertial)
+
+# add_executable(mono_inertial_euroc
+# Examples/Monocular-Inertial/mono_inertial_euroc.cc)
+# target_link_libraries(mono_inertial_euroc ${PROJECT_NAME})
 

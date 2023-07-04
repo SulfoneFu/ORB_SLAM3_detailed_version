@@ -3194,9 +3194,9 @@ void Optimizer::OptimizeEssentialGraph6DoF(KeyFrame* pCurKF, vector<KeyFrame*> &
             }
 
             string strNameFile = pKFi->mNameFile;
-            cv::Mat imLeft = cv::imread(strNameFile, CV_LOAD_IMAGE_UNCHANGED);
+            cv::Mat imLeft = cv::imread(strNameFile, cv::IMREAD_UNCHANGED);
 
-            cv::cvtColor(imLeft, imLeft, CV_GRAY2BGR);
+            cv::cvtColor(imLeft, imLeft, cv::COLOR_GRAY2BGR);
 
             vector<MapPoint*> vpMapPointsKFi = pKFi->GetMapPointMatches();
             for(int j=0; j<vpMapPointsKFi.size(); ++j)
@@ -3585,8 +3585,8 @@ void Optimizer::OptimizeEssentialGraph(KeyFrame* pCurKF, vector<KeyFrame*> &vpFi
                 cout << "--To much distance correction in EssentGraph: It has connected " << pKFi->GetVectorCovisibleKeyFrames().size() << " KFs" << endl;
             }
             string strNameFile = pKFi->mNameFile;
-            cv::Mat imLeft = cv::imread(strNameFile, CV_LOAD_IMAGE_UNCHANGED);
-            cv::cvtColor(imLeft, imLeft, CV_GRAY2BGR);
+            cv::Mat imLeft = cv::imread(strNameFile, cv::IMREAD_UNCHANGED);
+            cv::cvtColor(imLeft, imLeft, cv::COLOR_GRAY2BGR);
             vector<MapPoint*> vpMapPointsKFi = pKFi->GetMapPointMatches();
             for(int j=0; j<vpMapPointsKFi.size(); ++j)
             {
@@ -4176,10 +4176,10 @@ int Optimizer::OptimizeSim3(KeyFrame *pKF1, KeyFrame *pKF2, vector<MapPoint *> &
     int nOutKF2 = 0;
     int nMatchWithoutMP = 0;
 
-    cv::Mat img1 = cv::imread(pKF1->mNameFile, CV_LOAD_IMAGE_UNCHANGED);
-    cv::cvtColor(img1, img1, CV_GRAY2BGR);
-    cv::Mat img2 = cv::imread(pKF2->mNameFile, CV_LOAD_IMAGE_UNCHANGED);
-    cv::cvtColor(img2, img2, CV_GRAY2BGR);
+    cv::Mat img1 = cv::imread(pKF1->mNameFile, cv::IMREAD_UNCHANGED);
+    cv::cvtColor(img1, img1, cv::COLOR_GRAY2BGR);
+    cv::Mat img2 = cv::imread(pKF2->mNameFile, cv::IMREAD_UNCHANGED);
+    cv::cvtColor(img2, img2, cv::COLOR_GRAY2BGR);
 
     vector<int> vIdsOnlyInKF2;
 
@@ -5355,7 +5355,7 @@ void Optimizer::LocalInertialBA(KeyFrame *pKF, bool *pbStopFlag, Map *pMap, bool
     /*double t_const = std::chrono::duration_cast<std::chrono::duration<double> >(t1 - t0).count();
     double t_opt = std::chrono::duration_cast<std::chrono::duration<double> >(t2 - t1).count();
     double t_rec = std::chrono::duration_cast<std::chrono::duration<double> >(t3 - t2).count();
-    /*std::cout << " Construction time: " << t_const << std::endl;
+    std::cout << " Construction time: " << t_const << std::endl;
     std::cout << " Optimization time: " << t_opt << std::endl;
     std::cout << " Recovery time: " << t_rec << std::endl;
     std::cout << " Total time: " << t_const+t_opt+t_rec << std::endl;
@@ -6971,9 +6971,9 @@ void Optimizer::LocalBundleAdjustment(KeyFrame* pMainKF,vector<KeyFrame*> vpAdju
             if(bShowImages)
             {
                 string strNameFile = pKFi->mNameFile;
-                cv::Mat imLeft = cv::imread(strNameFile, CV_LOAD_IMAGE_UNCHANGED);
+                cv::Mat imLeft = cv::imread(strNameFile, cv::IMREAD_UNCHANGED);
 
-                cv::cvtColor(imLeft, imLeft, CV_GRAY2BGR);
+                cv::cvtColor(imLeft, imLeft, cv::COLOR_GRAY2BGR);
 
                 int numPointsMono = 0, numPointsStereo = 0;
                 int numPointsMonoBad = 0, numPointsStereoBad = 0;
